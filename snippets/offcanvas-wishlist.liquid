@@ -1,0 +1,33 @@
+{% if settings.wishlist %}
+  <div
+    id="offcanvas-wishlist"
+    class="offcanvas-wishlist offcanvas offcanvas-end"
+    tabindex="-1"
+    aria-labelledby="offcanvas-wishlist-label">
+    <div class="offcanvas-header">
+      <h2 id="offcanvas-wishlist-label" class="offcanvas-title">
+        {{ 'general.wishlist.title' | t }}
+      </h2>
+      <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="{{ 'general.accessibility.close' | t }}">
+        {% render 'svg-icons', icon: 'x' %}
+      </button>
+    </div>
+
+    <div class="offcanvas-body">
+      <div data-wishlist-page>
+        <p class="text-muted mb-5" data-wishlist-loading hidden>
+          Loading wishlist...
+        </p>
+
+        <div class="row row-cols-2 row-cols-desktop-3 g-2" data-wishlist-items></div>
+
+        <div class="wishlist-empty rte" data-wishlist-empty hidden>
+          {{ 'general.wishlist.empty_html' | t }}
+          <button class="btn btn-primary mt-5" type="button" data-bs-dismiss="offcanvas">
+            {{ 'general.wishlist.continue_shopping' | t }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

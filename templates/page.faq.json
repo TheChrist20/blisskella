@@ -1,0 +1,124 @@
+{
+  "sections": {
+    "91492711-8ea6-4c3d-b346-30c8b72100ec": {
+      "type": "faq",
+      "blocks": {
+        "faq-item-1": {
+          "type": "item",
+          "settings": {
+            "title": "Do you offer ready-to-ship items?",
+            "description": "<p>Bliss Kella operates on a dropshipping model. This means our items are shipped directly from our trusted suppliers to you, allowing us to offer a wider variety of styles at great value.</p>"
+          }
+        },
+        "faq-item-2": {
+          "type": "item",
+          "settings": {
+            "title": "How long does shipping take?",
+            "description": "<p>Because items are shipped directly from our suppliers, delivery typically takes 7–21 business days, depending on your location. We appreciate your patience as we work to get your order to you safely.</p>"
+          }
+        },
+        "faq-item-3": {
+          "type": "item",
+          "settings": {
+            "title": "Where are your products shipped from?",
+            "description": "<p>Our products are sourced from carefully selected suppliers and manufacturers, both locally and internationally, to ensure quality and style.</p>"
+          }
+        },
+        "faq-item-4": {
+          "type": "item",
+          "settings": {
+            "title": "Will I receive tracking information?",
+            "description": "<p>Yes. Once your order has been processed and shipped, you will receive a tracking number so you can follow your package every step of the way.</p>"
+          }
+        },
+        "faq-item-5": {
+          "type": "item",
+          "settings": {
+            "title": "Why does shipping take longer than usual?",
+            "description": "<p>Since we do not stock items in a physical warehouse and ship directly from suppliers, processing and shipping may take a little longer than standard retail stores. This helps us keep prices affordable and styles fresh.</p>"
+          }
+        },
+        "faq-item-6": {
+          "type": "item",
+          "settings": {
+            "title": "Can I cancel or change my order after placing it?",
+            "description": "<p>Orders can only be modified or cancelled within 24 hours of purchase. After this period, the order may already be in processing with our supplier.</p>"
+          }
+        },
+        "faq-item-7": {
+          "type": "item",
+          "settings": {
+            "title": "What if my order arrives damaged or incorrect?",
+            "description": "<p>If you receive a damaged, defective, or incorrect item, please contact us within 48 hours of delivery with clear photos, and we’ll be happy to assist you.</p>"
+          }
+        },
+        "faq-item-8": {
+          "type": "item",
+          "settings": {
+            "title": "Do you accept returns or exchanges?",
+            "description": "<p>Due to the dropshipping nature of our business, returns are handled directly with our suppliers and may be subject to their policies. Please contact our support team and we will guide you through the return or exchange process.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-item-1",
+        "faq-item-2",
+        "faq-item-3",
+        "faq-item-4",
+        "faq-item-5",
+        "faq-item-6",
+        "faq-item-7",
+        "faq-item-8"
+      ],
+      "settings": {
+        "bg_color": "bg-body",
+        "bg_opacity": 100,
+        "bg_gradient": "",
+        "text_color": "text-body",
+        "border_top_width": 0,
+        "border_bottom_width": 0,
+        "border_color": "border-body",
+        "border_opacity": 100,
+        "container_max_width": "",
+        "open_first_item": true,
+        "header_title": "FAQ",
+        "header_title_font_size": "h1",
+        "header_description": "<p>Still need to reach us? Please <a href=\"\/pages\/contact\" title=\"Contact us\">contact us<\/a> anytime.<\/p>",
+        "header_description_font_size": "fs-md",
+        "pt": 11,
+        "pb": 11
+      }
+    },
+    "664feedb-7180-4e8f-a84d-1cf45bc1dd42": {
+      "type": "richtext",
+      "settings": {
+        "bg_color": "bg-body",
+        "bg_opacity": 100,
+        "bg_gradient": "",
+        "text_color": "text-body",
+        "border_top_width": 0,
+        "border_bottom_width": 0,
+        "border_color": "border-body",
+        "border_opacity": 10,
+        "container_max_width": "900",
+        "text_align": "text-center",
+        "title": "Still have questions?",
+        "title_font_size": "h3",
+        "description": "<p>Please contact us anytime from Monday to Friday<\/p>",
+        "description_font_size": "fs-md",
+        "btn_primary_text": "Contact us",
+        "btn_primary_url": "shopify:\/\/pages\/contact",
+        "btn_primary_color": "btn-primary",
+        "btn_secondary_text": "",
+        "btn_secondary_url": "",
+        "btn_secondary_color": "btn-secondary",
+        "pt": 6,
+        "pb": 12
+      }
+    }
+  },
+  "order": [
+    "91492711-8ea6-4c3d-b346-30c8b72100ec",
+    "664feedb-7180-4e8f-a84d-1cf45bc1dd42"
+  ]
+}

@@ -1,0 +1,100 @@
+<div 
+  id="offcanvas-menu" 
+  class="offcanvas offcanvas-bottom" 
+  tabindex="-1" 
+  data-bs-backdrop="false"
+  aria-label="{{ 'general.accessibility.menu' | t }}">
+  <div class="offcanvas-body">
+    <ul class="nav accordion-nav mb-9">
+      <li class="nav-item">
+        <a 
+          class="nav-link {% if template == 'index' %}active{% endif %}" 
+          href="/" 
+          aria-current="{% if template == 'index' %}page{% endif %}">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link" 
+          href="/collections/all">
+          Catalog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link" 
+          href="/pages/contact">
+          Contact
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link" 
+          href="/pages/about-us">
+          About Us
+        </a>
+      </li>
+      <li class="nav-item">
+        <a 
+          class="nav-link" 
+          href="/pages/faq">
+          FAQs
+        </a>
+      </li>
+      {% if settings.wishlist %}
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#offcanvas-wishlist"
+            data-bs-toggle="offcanvas"
+            data-bs-dismiss="offcanvas"
+            data-wishlist-open
+            aria-controls="offcanvas-wishlist"
+            aria-label="{{ 'general.accessibility.wishlist' | t }}"
+            role="button">
+            {{ 'general.wishlist.title' | t }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+
+    {% if block.settings.social_icons %}
+      <div class="social-icons-wrapper text-center mb-5">
+        {% render 'social-icons', show_title: false %}
+      </div>
+    {% endif %}
+
+    {% unless block.settings.secondary_menu == nil %}
+      <ul class="nav nav-secondary justify-content-center mb-4">
+        {% for link in linklists[block.settings.secondary_menu].links %}
+          <li class="nav-item">
+            <a 
+              class="nav-link py-2 px-4 {% if link.active %}active{% endif %}" 
+              href="{{ link.url }}" 
+              aria-current="{% if link.active %}page{% endif %}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endunless %}
+
+    <ul class="nav justify-content-center mb-4">
+      {% if localization.available_countries.size > 1 %}
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-icon"
+            href="#modal-localization"
+            data-bs-toggle="modal"
+            aria-controls="modal-localization" 
+            aria-label="{{ 'general.accessibility.localization' | t }} {{ localization.country.name }}"
+            role="button">
+            {{ localization.country | image_url: width: 20, height: 20 | image_tag }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+    
+  </div>
+</div>

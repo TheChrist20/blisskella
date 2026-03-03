@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "wishlist-main",
+      "settings": {
+        "bg_color": "bg-body",
+        "text_color": "text-body",
+        "container_max_width": "",
+        "pt": 10,
+        "pb": 10
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

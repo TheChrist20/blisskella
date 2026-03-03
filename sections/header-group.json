@@ -1,0 +1,54 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    
+    "navbar": {
+      "type": "navbar",
+      "blocks": {
+        "37d4f863-aecd-4a86-87c1-a5887bf87140": {
+          "type": "mobile",
+          "settings": {
+            "container_max_width": "",
+            "logo": "shopify:\/\/shop_images\/ks-Blisskella-logo.png",
+            "logo_height": 30,
+            "main_menu": "dropdown-menu",
+            "collections_menu": "",
+            "social_icons": true,
+            "pt": 2,
+            "pb": 2
+          }
+        },
+        "069e870e-aed4-4929-bf73-c0daca8be18e": {
+          "type": "desktop",
+          "settings": {
+            "container_max_width": "",
+            "logo": "shopify:\/\/shop_images\/ks-Blisskella-logo.png",
+            "logo_height": 32,
+            "main_menu": "dropdown-menu",
+            "pt": 5,
+            "pb": 5
+          }
+        }
+      },
+      "block_order": [
+        "37d4f863-aecd-4a86-87c1-a5887bf87140",
+        "069e870e-aed4-4929-bf73-c0daca8be18e"
+      ],
+      "settings": {
+        "bg_color": "bg-body",
+        "bg_opacity": 100,
+        "bg_gradient": "",
+        "text_color": "text-body",
+        "border_top_width": 0,
+        "border_bottom_width": 0,
+        "border_color": "border-body",
+        "border_opacity": 100,
+        "shadow": "shadow-sm"
+      }
+    }
+  },
+  "order": [
+    "navbar"
+  ]
+}

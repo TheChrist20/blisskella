@@ -1,0 +1,96 @@
+<section
+  id="wishlist-main-{{ section.id }}"
+  class="
+    wishlist-main
+    {{ section.settings.bg_color }}
+    {{ section.settings.text_color }}
+    {{ section.settings.pt | prepend: 'pt-' }}
+    {{ section.settings.pb | prepend: 'pb-' }}
+  ">
+  <div
+    class="container"
+    style="max-width: {{ section.settings.container_max_width | append: 'px' }};">
+    <div class="section-header mb-7">
+      <h1 class="title mb-0">
+        {{ 'general.wishlist.title' | t }}
+      </h1>
+    </div>
+
+    <div data-wishlist-page>
+      <p class="text-muted mb-5" data-wishlist-loading hidden>
+        Loading wishlist...
+      </p>
+
+      <div class="row" data-wishlist-items></div>
+
+      <div class="wishlist-empty rte" data-wishlist-empty hidden>
+        {{ 'general.wishlist.empty_html' | t }}
+        <a class="btn btn-primary mt-5" href="/collections/all">
+          {{ 'general.wishlist.continue_shopping' | t }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Wishlist main",
+  "settings": [
+    {
+      "type": "select",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "bg-body",
+      "options": [
+        { "value": "bg-primary", "label": "Primary" },
+        { "value": "bg-secondary", "label": "Secondary" },
+        { "value": "bg-body", "label": "Body" },
+        { "value": "bg-white", "label": "White" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "text-body",
+      "options": [
+        { "value": "text-primary", "label": "Primary" },
+        { "value": "text-secondary", "label": "Secondary" },
+        { "value": "text-body", "label": "Body" },
+        { "value": "text-white", "label": "White" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "container_max_width",
+      "label": "Container max-width (px)",
+      "info": "Leave empty to use the global container width"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Top",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Bottom",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    }
+  ],
+  "templates": ["page"],
+  "presets": [
+    {
+      "name": "Wishlist main"
+    }
+  ]
+}
+{% endschema %}

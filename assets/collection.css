@@ -1,0 +1,237 @@
+/*
+  © 2024 KondaSoft
+  https://www.kondasoft.com
+*/
+
+/*
+  Collection header
+*/
+.collection-header {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  text-align: center;
+}
+
+
+/*
+  Collection products
+*/
+.collection-products {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all .2s ease-out;
+}
+
+.collection-utilities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-by input + label {
+  cursor: pointer;
+}
+
+.sort-by input:checked + label {
+  color: var(--bs-primary);
+}
+
+.sort-by input:focus-visible + label {
+  box-shadow: var(--bs-focus-box-shadow);
+}
+
+.collection-utilities-controls {
+  gap: 0.6rem !important;
+}
+
+.collection-utilities-btn {
+  height: 2.45rem;
+  white-space: nowrap;
+}
+
+.collection-search {
+  display: block;
+  flex: 1 1 360px;
+  min-width: 260px;
+  max-width: 560px;
+}
+
+.collection-search .form-control-wrapper {
+  position: relative;
+}
+
+.collection-search .form-control {
+  position: relative;
+  z-index: 1;
+  height: 2.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  padding-left: 1rem;
+  padding-right: 3rem;
+  font-size: 0.94rem;
+  line-height: 1.1;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collection-search .form-control::placeholder {
+  color: rgba(15, 23, 42, 0.5);
+}
+
+.collection-search .form-control:focus {
+  border-color: rgba(13, 110, 253, 0.38);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12), 0 10px 24px rgba(15, 23, 42, 0.1);
+}
+
+.collection-search .btn-link {
+  position: absolute;
+  top: 50%;
+  right: 0.45rem;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  color: rgba(15, 23, 42, 0.65);
+  background: rgba(15, 23, 42, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.collection-search .btn-link:hover,
+.collection-search .btn-link:focus {
+  color: #fff;
+  background: var(--bs-primary);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.collection-search .btn-link svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+@media (max-width: 767.98px) {
+  .collection-utilities {
+    display: block !important;
+  }
+
+  .collection-product-count {
+    margin-bottom: 0.7rem !important;
+  }
+
+  .collection-utilities-controls {
+    display: flex !important;
+    gap: 0.45rem !important;
+  }
+
+  .collection-search {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .collection-search .form-control {
+    height: 2.7rem;
+    font-size: 0.95rem;
+    padding-right: 3.1rem;
+  }
+
+  .collection-search .btn-link {
+    width: 2.05rem;
+    height: 2.05rem;
+    right: 0.4rem;
+  }
+
+  .collection-utilities-btn,
+  .collection-utilities-controls .sort-by .btn {
+    margin-top: 0;
+    margin-right: 0.45rem;
+    margin-bottom: 0.45rem;
+  }
+}
+
+/*
+  Collection filters
+*/
+#offcanvas-collection-filters {
+  width: 320px;
+}
+
+.collection-filters {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+} 
+
+.collection-filters .collapse-wrapper {
+  border-bottom: none;
+  margin: 0;
+}
+
+.collection-filters .collapse-wrapper button[data-bs-toggle=collapse] {
+  background-color: var(--bs-light);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+}
+
+.collection-filters .collapse-wrapper button[data-bs-toggle=collapse]::after {
+  right: 0.75rem;
+}
+
+.collection-filters .collapse-wrapper .collapse-inner {
+  padding: .25rem 1rem 1.5rem;
+}
+
+.collection-filters .form-check {
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+
+/*
+  Collection card
+*/
+.collection-card-link {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.collection-card-link:focus-visible {
+  outline: 0;
+  box-shadow: var(--bs-focus-box-shadow);
+}
+
+.collection-card-title {
+  transition: all 200ms ease-out;
+}
+
+.collection-card-img-wrapper {
+  position: relative;
+}
+
+.collection-card-img-wrapper img { 
+  width: 100%;
+}
+
+.collection-card-title-normal {
+  margin-top: 0.5rem;
+}
+
+.collection-card-link:hover .collection-card-title-normal,
+.collection-card-link:focus .collection-card-title-normal {
+  opacity: .8;
+}
+

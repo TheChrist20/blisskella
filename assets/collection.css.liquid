@@ -1,0 +1,53 @@
+/*
+  Collection-specific final overrides
+  Loaded after collection.css
+*/
+
+.collection-search .form-control-wrapper {
+  position: relative;
+}
+
+.collection-search .form-control {
+  padding-right: 3.25rem !important;
+}
+
+.collection-search .btn-link {
+  position: absolute;
+  top: 50%;
+  right: 0.45rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.06);
+  color: rgba(15, 23, 42, 0.68);
+  text-decoration: none;
+  z-index: 3;
+}
+
+.collection-search .btn-link::before {
+  content: "";
+  position: absolute;
+  left: -0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.2rem;
+  background: rgba(15, 23, 42, 0.12);
+}
+
+.collection-search .btn-link:hover,
+.collection-search .btn-link:focus {
+  background: var(--bs-primary);
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .collection-utilities {
+    display: block !important;
+  }
+}

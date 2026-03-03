@@ -1,0 +1,308 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Adine+Kirnberg&display=swap');
+
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//blisskella.myshopify.com/cdn/fonts/ubuntu/ubuntu_n4.2c466c9d72970fbeeea5774a5658b256f03b28fd.woff2") format("woff2"),
+       url("//blisskella.myshopify.com/cdn/fonts/ubuntu/ubuntu_n4.7d58d3bbaa6e4145f1df3f31b336b0f96f56885c.woff") format("woff");
+}
+
+
+
+  
+  
+  
+  
+
+
+  :root {
+
+
+    /* App palette (user provided) */
+    --app-rose-pale: #ffffff;
+    --app-rose-pale-rgb: 255,255,255;
+    --app-rose: #ef626c;
+    --app-rose-rgb: 239,98,108;
+    --app-ink: #22181c;
+    --app-ink-rgb: 34,24,28;
+    --app-charcoal: #312f2f;
+    --app-charcoal-rgb: 49,47,47;
+    --app-mint: #84dccf;
+    --app-mint-rgb: 132,220,207;
+
+    /* Semantic palette tokens */
+    --palette-accent: var(--app-rose);
+    --palette-accent-2: var(--app-mint);
+    --palette-primary: var(--app-ink);
+    --palette-muted: var(--app-charcoal);
+    /* Force background palette to white to avoid unintended pink tint */
+    --palette-bg: #ffffff;
+    --palette-bg-rgb: 255,255,255;
+
+    /* Map existing theme tokens (kept for compatibility) */
+    --bs-petal-rouge: var(--app-rose);
+    --bs-petal-rouge-rgb: var(--app-rose-rgb);
+    --bs-glaucous: var(--app-charcoal);
+    --bs-glaucous-rgb: var(--app-charcoal-rgb);
+    /* Ensure legacy tokens also map to white */
+    --bs-platinum: #ffffff;
+    --bs-platinum-rgb: 255,255,255;
+    --bs-pale-slate: var(--app-charcoal);
+    --bs-pale-slate-rgb: var(--app-charcoal-rgb);
+
+    /* Semantic token mappings (assign palette to theme roles) */
+    /* Explicitly set body background variables to white */
+    --bs-body-bg: #ffffff;
+    --bs-body-bg-rgb: 255,255,255;
+    --bs-body-color: var(--palette-primary);
+    --bs-body-color-rgb: var(--color-glaucous-rgb);
+    --bs-heading-color: var(--palette-primary);
+    --bs-emphasis-color: var(--palette-primary);
+    --bs-link-color: var(--palette-accent-2);
+    --bs-link-color-rgb: var(--color-petal-rouge-rgb);
+    --bs-link-hover-color: rgba(var(--color-petal-rouge-rgb), 0.9);
+    --bs-border-color: var(--palette-muted);
+    --bs-border-color-rgb: var(--color-pale-slate-rgb);
+    --bs-secondary-bg: var(--palette-muted);
+    --bs-tertiary-bg: var(--palette-bg);
+    --bs-highlight-bg: rgba(var(--color-sunflower-gold-rgb), 0.12);
+    --bs-highlight-color: var(--palette-primary);
+
+    /* Navbar default background (transparent) to preserve top-of-page transparency */
+    --navbar-bg: transparent;
+
+
+
+    --bs-container-max-width: {
+        {
+        settings.container_max_width | append: 'px'
+      }
+    }
+
+    ;
+
+    --bs-border-radius: {
+        {
+        settings.border_radius | append: 'rem'
+      }
+    }
+
+    ;
+
+
+
+    --bs-body-font-family: "system_ui", -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --bs-body-font-weight: {
+      {
+      settings.font_body.weight
+    }
+  }
+
+  ;
+
+  --bs-body-font-size: {
+      {
+      settings.font_body_size | append: 'rem'
+    }
+  }
+
+  ;
+
+--bs-headings-font-family: Ubuntu, sans-serif;
+
+--bs-headings-font-weight: {
+    {
+    settings.font_headings.weight
+  }
+}
+
+;
+
+--bs-headings-text-transform: {
+    {
+    settings.headings_text_transform
+  }
+}
+
+;
+
+
+
+--bs-dialog-backdrop-color-rgb: {
+    {
+    settings.dialog_backdrop_color | color_to_rgb | remove: 'rgb(' | remove: ')'
+  }
+}
+
+;
+
+--bs-dialog-backdrop-opacity: {
+    {
+    settings.dialog_backdrop_opacity | append: '%'
+  }
+}
+
+;
+
+--bs-dialog-backdrop-blur: {
+    {
+    settings.dialog_backdrop_blur | append: 'px'
+  }
+}
+
+;
+
+--bs-dialog-backdrop-blur: {
+    {
+    settings.dialog_backdrop_blur | append: 'px'
+  }
+}
+
+;
+
+/* button-specific radius (can override global) */
+--btn-radius: {
+    {
+    settings.border_radius | append: 'rem'
+  }
+}
+
+;
+
+--bs-dialog-header-bg-color-rgb: {
+    {
+    settings.dialog_header_bg_color | prepend: 'var(--bs-' | append: '-rgb)'
+  }
+}
+
+;
+
+--bs-dialog-header-bg-opacity: {
+    {
+    settings.dialog_header_bg_opacity | append: '%'
+  }
+}
+
+;
+
+--bs-dialog-header-text-color: {
+    {
+    settings.dialog_header_text_color
+  }
+}
+
+;
+
+--bs-dialog-header-border-width: {
+    {
+    settings.dialog_header_border_width | append: 'px'
+  }
+}
+
+;
+
+--bs-dialog-header-border-color-rgb: {
+    {
+    settings.dialog_header_border_color | prepend: 'var(--bs-' | append: '-rgb)'
+  }
+}
+
+;
+
+--bs-dialog-header-border-opacity: {
+    {
+    settings.dialog_header_border_opacity | append: '%'
+  }
+}
+
+;
+
+--bs-dialog-header-title-font-size: {
+    {
+    settings.dialog_header_title_font_size | append: 'em'
+  }
+}
+
+;
+
+
+
+--bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(var(--bs-pale-slate-rgb), 0.075);
+--bs-box-shadow-md: 0 0.25rem 0.5rem rgba(var(--bs-pale-slate-rgb), 0.125);
+--bs-box-shadow-lg: 0 .5rem 1rem rgba(var(--bs-pale-slate-rgb), 0.175);
+--bs-focus-box-shadow: 0 0 0 .25rem rgba(var(--color-sunflower-gold-rgb), .125);
+--bs-box-shadow: var(--bs-box-shadow-md);
+}
+
+
+
+.btn {
+  --bs-btn-font-size: {
+      {
+      settings.btn_font_size | append: 'rem'
+    }
+  }
+
+  ;
+
+  --bs-btn-text-transform: {
+      {
+      settings.btn_text_transform
+    }
+  }
+
+  ;
+
+  --bs-btn-font-family-new: {
+      {
+      settings.btn_font_family
+    }
+  }
+
+  ;
+
+  --bs-btn-font-weight: {
+      {
+      settings.btn_font_weight
+    }
+  }
+
+  ;
+
+  --bs-btn-letter-spacing: {
+      {
+      settings.btn_letter_spacing | times: 0.05 | append: 'rem'
+    }
+  }
+
+  ;
+
+  --bs-btn-bg-gradient:  var(--bs-gradient) ;
+
+  --bs-btn-padding-x: {
+      {
+      settings.btn_padding_x | append: 'rem'
+    }
+  }
+
+  ;
+
+  --bs-btn-padding-y: {
+      {
+      settings.btn_padding_y | append: 'rem'
+    }
+  }
+
+  ;
+}
+
+
+
+.form-check-input:checked[type=radio] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23ffffff'/%3e%3c/svg%3e");
+}
