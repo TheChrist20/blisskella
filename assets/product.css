@@ -1073,7 +1073,7 @@ body .shopify_subscriptions_app_policy {
   background: #faf8f5;
   border: 1px solid rgba(0, 0, 0, 0.09) !important;
   border-radius: 0.85rem;
-  padding: 0 0;
+  padding: 0 0.8rem !important;
 }
 
 .product-main .product-block-collapse .collapse-wrapper > button {
