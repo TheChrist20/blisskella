@@ -1,0 +1,380 @@
+.about-us-modern {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 0% 10%, rgba(243, 217, 194, 0.55) 0%, rgba(243, 217, 194, 0) 36%),
+              radial-gradient(circle at 100% 0%, rgba(198, 106, 43, 0.16) 0%, rgba(198, 106, 43, 0) 40%),
+              var(--about-bg);
+  color: var(--about-text);
+  padding: clamp(3.5rem, 7vw, 7rem) 0;
+}
+
+.about-us-modern__container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-us-modern__orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(6px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.about-us-modern__orb--one {
+  width: 280px;
+  height: 280px;
+  top: -90px;
+  left: -80px;
+  background: rgba(243, 217, 194, 0.75);
+}
+
+.about-us-modern__orb--two {
+  width: 220px;
+  height: 220px;
+  right: -70px;
+  bottom: 120px;
+  background: rgba(198, 106, 43, 0.18);
+}
+
+.about-us-modern__hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: center;
+}
+
+.about-us-modern__eyebrow {
+  margin: 0 0 0.8rem;
+  display: inline-flex;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(243, 217, 194, 0.6);
+  border: 1px solid var(--about-border);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-us-modern__heading {
+  margin: 0;
+  font-size: clamp(2.1rem, 4.8vw, 4.3rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.about-us-modern__subheading {
+  margin-top: 1rem;
+  max-width: 56ch;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: rgba(24, 20, 18, 0.82);
+}
+
+.about-us-modern__actions {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.about-us-modern__actions .btn {
+  border-radius: 999px;
+  padding-inline: 1.4rem;
+}
+
+.about-us-modern__hero-media {
+  position: relative;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  min-height: 300px;
+  background: var(--about-surface);
+  border: 1px solid var(--about-border);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+}
+
+.about-us-modern__hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.about-us-modern__hero-image--placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.about-us-modern__floating-note {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.8rem;
+  color: #141414;
+}
+
+.about-us-modern__stats {
+  margin-top: clamp(1.5rem, 3vw, 2.6rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.about-us-modern__stat {
+  background: var(--about-surface);
+  border: 1px solid var(--about-border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.about-us-modern__stat-value {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 0.95;
+  color: var(--about-accent);
+  font-weight: 700;
+}
+
+.about-us-modern__stat-label {
+  margin: 0.45rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(24, 20, 18, 0.8);
+}
+
+.about-us-modern__story {
+  margin-top: clamp(2.1rem, 4vw, 3.2rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.2rem, 2.5vw, 2.2rem);
+}
+
+.about-us-modern__section-title {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+  letter-spacing: -0.02em;
+}
+
+.about-us-modern__story-text {
+  font-size: 1.02rem;
+  color: rgba(24, 20, 18, 0.86);
+}
+
+.about-us-modern__values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.about-us-modern__value {
+  background: var(--about-surface);
+  border: 1px solid var(--about-border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+}
+
+.about-us-modern__value h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.about-us-modern__value p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(24, 20, 18, 0.8);
+}
+
+.about-us-modern__timeline-wrap,
+.about-us-modern__team-wrap {
+  margin-top: clamp(2.2rem, 4vw, 3.4rem);
+}
+
+.about-us-modern__timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-us-modern__timeline-item {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 245, 0.9));
+  border: 1px solid var(--about-border);
+  border-radius: 1.1rem;
+  padding: 1.15rem 1.05rem 1.1rem;
+  min-height: 220px;
+  box-shadow: 0 10px 28px rgba(24, 20, 18, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.about-us-modern__timeline-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--about-accent), rgba(198, 106, 43, 0.2));
+}
+
+.about-us-modern__timeline-item::after {
+  content: "";
+  position: absolute;
+  top: -46px;
+  right: -34px;
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(198, 106, 43, 0.18) 0%, rgba(198, 106, 43, 0) 70%);
+  pointer-events: none;
+}
+
+.about-us-modern__timeline-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(24, 20, 18, 0.12);
+  border-color: rgba(198, 106, 43, 0.45);
+}
+
+.about-us-modern__timeline-year {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  color: var(--about-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(198, 106, 43, 0.14);
+  border: 1px solid rgba(198, 106, 43, 0.28);
+  border-radius: 999px;
+  padding: 0.28rem 0.6rem;
+}
+
+.about-us-modern__timeline-item h3 {
+  margin: 0.7rem 0 0;
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.about-us-modern__timeline-item p {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(24, 20, 18, 0.76);
+}
+
+.about-us-modern__team {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.about-us-modern__member {
+  background: var(--about-surface);
+  border: 1px solid var(--about-border);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.about-us-modern__member-image-wrap {
+  aspect-ratio: 3 / 4;
+  background: rgba(243, 217, 194, 0.42);
+}
+
+.about-us-modern__member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-modern__member-image--placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.about-us-modern__member-body {
+  padding: 0.8rem;
+}
+
+.about-us-modern__member-body h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.about-us-modern__member-role {
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+  color: rgba(24, 20, 18, 0.72);
+}
+
+.about-us-modern__cta {
+  margin-top: clamp(2.4rem, 4.5vw, 3.8rem);
+  border-radius: 1rem;
+  border: 1px solid var(--about-border);
+  background: linear-gradient(135deg, rgba(243, 217, 194, 0.4), var(--about-surface));
+  padding: clamp(1.2rem, 2.3vw, 2rem);
+}
+
+.about-us-modern__cta h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+.about-us-modern__cta p {
+  margin: 0.6rem 0 1rem;
+  max-width: 62ch;
+  color: rgba(24, 20, 18, 0.75);
+}
+
+.about-us-modern__cta .btn {
+  border-radius: 999px;
+}
+
+@media (max-width: 1199.98px) {
+  .about-us-modern__team {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-us-modern__hero,
+  .about-us-modern__story {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-modern__timeline,
+  .about-us-modern__team {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-us-modern__hero-media {
+    order: -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-us-modern {
+    padding: 3rem 0;
+  }
+
+  .about-us-modern__stats,
+  .about-us-modern__timeline,
+  .about-us-modern__team {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-modern__heading {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  .about-us-modern__hero-media,
+  .about-us-modern__hero-image,
+  .about-us-modern__hero-image--placeholder {
+    min-height: 240px;
+  }
+}

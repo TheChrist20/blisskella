@@ -1,0 +1,448 @@
+{{ 'about-us-modern.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_bg = section.settings.section_bg
+  assign section_text = section.settings.section_text
+%}
+
+<section
+  id="about-us-modern-{{ section.id }}"
+  class="about-us-modern"
+  style="
+    --about-bg: {{ section_bg }};
+    --about-text: {{ section_text }};
+    --about-surface: {{ section.settings.surface_color }};
+    --about-accent: {{ section.settings.accent_color }};
+    --about-accent-soft: {{ section.settings.accent_soft_color }};
+    --about-border: {{ section.settings.border_color }};
+  "
+>
+  <div class="about-us-modern__orb about-us-modern__orb--one" aria-hidden="true"></div>
+  <div class="about-us-modern__orb about-us-modern__orb--two" aria-hidden="true"></div>
+
+  <div class="container about-us-modern__container" style="max-width: {{ section.settings.container_max_width }}px;">
+    <header class="about-us-modern__hero">
+      <div class="about-us-modern__hero-copy">
+        {% if section.settings.eyebrow != blank %}
+          <p class="about-us-modern__eyebrow">{{ section.settings.eyebrow }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h1 class="about-us-modern__heading">{{ section.settings.heading }}</h1>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <div class="about-us-modern__subheading rte">{{ section.settings.subheading }}</div>
+        {% endif %}
+
+        <div class="about-us-modern__actions">
+          {% if section.settings.primary_button_label != blank %}
+            <a class="btn btn-dark" href="{{ section.settings.primary_button_url | default: routes.all_products_collection_url }}">
+              {{ section.settings.primary_button_label }}
+            </a>
+          {% endif %}
+          {% if section.settings.secondary_button_label != blank %}
+            <a class="btn btn-outline-dark" href="{{ section.settings.secondary_button_url | default: routes.root_url }}">
+              {{ section.settings.secondary_button_label }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="about-us-modern__hero-media">
+        {% if section.settings.hero_image != blank %}
+          {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'lazy', class: 'about-us-modern__hero-image', alt: section.settings.hero_image.alt | escape }}
+        {% else %}
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'about-us-modern__hero-image about-us-modern__hero-image--placeholder' }}
+        {% endif %}
+        {% if section.settings.floating_note != blank %}
+          <div class="about-us-modern__floating-note">{{ section.settings.floating_note }}</div>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="about-us-modern__stats" role="list" aria-label="Brand highlights">
+      {% for block in section.blocks %}
+        {% if block.type == 'stat' %}
+          <article class="about-us-modern__stat" role="listitem" {{ block.shopify_attributes }}>
+            <p class="about-us-modern__stat-value">{{ block.settings.value }}</p>
+            <p class="about-us-modern__stat-label">{{ block.settings.label }}</p>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <section class="about-us-modern__story">
+      <div>
+        {% if section.settings.story_heading != blank %}
+          <h2 class="about-us-modern__section-title">{{ section.settings.story_heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.show_page_content %}
+          <div class="about-us-modern__story-text rte">{{ page.content }}</div>
+        {% elsif section.settings.story_text != blank %}
+          <div class="about-us-modern__story-text rte">{{ section.settings.story_text }}</div>
+        {% endif %}
+      </div>
+
+      <div class="about-us-modern__values" role="list" aria-label="Brand values">
+        {% for block in section.blocks %}
+          {% if block.type == 'value' %}
+            <article class="about-us-modern__value" role="listitem" {{ block.shopify_attributes }}>
+              {% if block.settings.title != blank %}
+                <h3>{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <p>{{ block.settings.description }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="about-us-modern__timeline-wrap">
+      {% if section.settings.timeline_heading != blank %}
+        <h2 class="about-us-modern__section-title">{{ section.settings.timeline_heading }}</h2>
+      {% endif %}
+
+      <div class="about-us-modern__timeline" role="list" aria-label="Company milestones">
+        {% for block in section.blocks %}
+          {% if block.type == 'milestone' %}
+            <article class="about-us-modern__timeline-item" role="listitem" {{ block.shopify_attributes }}>
+              <p class="about-us-modern__timeline-year">{{ block.settings.year }}</p>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.description }}</p>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="about-us-modern__team-wrap">
+      {% if section.settings.team_heading != blank %}
+        <h2 class="about-us-modern__section-title">{{ section.settings.team_heading }}</h2>
+      {% endif %}
+
+      <div class="about-us-modern__team" role="list" aria-label="Team members">
+        {% for block in section.blocks %}
+          {% if block.type == 'team_member' %}
+            <article class="about-us-modern__member" role="listitem" {{ block.shopify_attributes }}>
+              <div class="about-us-modern__member-image-wrap">
+                {% if block.settings.image != blank %}
+                  {{ block.settings.image | image_url: width: 640 | image_tag: loading: 'lazy', class: 'about-us-modern__member-image', alt: block.settings.name | escape }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'about-us-modern__member-image about-us-modern__member-image--placeholder' }}
+                {% endif %}
+              </div>
+              <div class="about-us-modern__member-body">
+                <h3>{{ block.settings.name }}</h3>
+                <p class="about-us-modern__member-role">{{ block.settings.role }}</p>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="about-us-modern__cta">
+      {% if section.settings.cta_heading != blank %}
+        <h2>{{ section.settings.cta_heading }}</h2>
+      {% endif %}
+      {% if section.settings.cta_text != blank %}
+        <p>{{ section.settings.cta_text }}</p>
+      {% endif %}
+      {% if section.settings.cta_button_label != blank %}
+        <a class="btn btn-dark" href="{{ section.settings.cta_button_url | default: routes.root_url }}">{{ section.settings.cta_button_label }}</a>
+      {% endif %}
+    </section>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About us modern",
+  "templates": ["page"],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "text",
+      "id": "container_max_width",
+      "label": "Container max-width (px)",
+      "default": "1240"
+    },
+    {
+      "type": "header",
+      "content": "Color style"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Background",
+      "default": "#f6f1ea"
+    },
+    {
+      "type": "color",
+      "id": "section_text",
+      "label": "Text",
+      "default": "#181412"
+    },
+    {
+      "type": "color",
+      "id": "surface_color",
+      "label": "Surface",
+      "default": "#fffaf5"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "default": "#c66a2b"
+    },
+    {
+      "type": "color",
+      "id": "accent_soft_color",
+      "label": "Soft accent",
+      "default": "#f3d9c2"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#ead8c9"
+    },
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "About Blisskella"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Designed for women who move with confidence."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>We blend clean silhouettes, bold details, and practical comfort to create pieces that feel effortless all day.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "floating_note",
+      "label": "Floating note",
+      "default": "Built with purpose since 2021"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primary button label",
+      "default": "Shop latest drop"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_url",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secondary button label",
+      "default": "View contact"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_url",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "header",
+      "content": "Story"
+    },
+    {
+      "type": "text",
+      "id": "story_heading",
+      "label": "Story heading",
+      "default": "Our story"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_page_content",
+      "label": "Use this page's content as story text",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "story_text",
+      "label": "Story text (used when checkbox is off)",
+      "default": "<p>Start with a clear point of view and add details that show what your brand stands for.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Milestones and team"
+    },
+    {
+      "type": "text",
+      "id": "timeline_heading",
+      "label": "Timeline heading",
+      "default": "Milestones"
+    },
+    {
+      "type": "text",
+      "id": "team_heading",
+      "label": "Team heading",
+      "default": "Meet the team"
+    },
+    {
+      "type": "header",
+      "content": "Bottom callout"
+    },
+    {
+      "type": "text",
+      "id": "cta_heading",
+      "label": "CTA heading",
+      "default": "Want to collaborate with us?"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "CTA text",
+      "default": "Reach out for partnerships, styling requests, or wholesale opportunities."
+    },
+    {
+      "type": "text",
+      "id": "cta_button_label",
+      "label": "CTA button label",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_url",
+      "label": "CTA button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "50K+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Happy customers"
+        }
+      ]
+    },
+    {
+      "type": "value",
+      "name": "Value card",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Craft first"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Each product is tested for fit, comfort, and durability before launch."
+        }
+      ]
+    },
+    {
+      "type": "milestone",
+      "name": "Milestone",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year",
+          "default": "2024"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Scaled beyond local"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Expanded delivery coverage and improved customer support operations."
+        }
+      ]
+    },
+    {
+      "type": "team_member",
+      "name": "Team member",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Team member"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role",
+          "default": "Role"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About us modern",
+      "blocks": [
+        { "type": "stat" },
+        { "type": "stat" },
+        { "type": "stat" },
+        { "type": "value" },
+        { "type": "value" },
+        { "type": "value" },
+        { "type": "milestone" },
+        { "type": "milestone" },
+        { "type": "milestone" },
+        { "type": "team_member" },
+        { "type": "team_member" },
+        { "type": "team_member" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

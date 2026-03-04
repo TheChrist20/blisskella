@@ -1,0 +1,102 @@
+{{ 'about-us-modern.css' | asset_url | stylesheet_tag }}
+
+<section
+  id="about-us-modern-static"
+  class="about-us-modern"
+  style="
+    --about-bg: #f6f1ea;
+    --about-text: #181412;
+    --about-surface: #fffaf5;
+    --about-accent: #c66a2b;
+    --about-accent-soft: #f3d9c2;
+    --about-border: #ead8c9;
+  "
+>
+  <div class="about-us-modern__orb about-us-modern__orb--one" aria-hidden="true"></div>
+  <div class="about-us-modern__orb about-us-modern__orb--two" aria-hidden="true"></div>
+
+  <div class="container about-us-modern__container" style="max-width: 1240px;">
+    <header class="about-us-modern__hero">
+      <div class="about-us-modern__hero-copy">
+        <p class="about-us-modern__eyebrow">About Blisskella</p>
+        <h1 class="about-us-modern__heading">Designed for women who move with confidence.</h1>
+        <div class="about-us-modern__subheading rte">
+          <p>We blend clean silhouettes, bold details, and practical comfort to create pieces that feel effortless all day.</p>
+        </div>
+        <div class="about-us-modern__actions">
+          <a class="btn btn-dark" href="{{ routes.all_products_collection_url }}">Shop latest drop</a>
+          <a class="btn btn-outline-dark" href="/pages/contact-us">View contact</a>
+        </div>
+      </div>
+      <div class="about-us-modern__hero-media">
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'about-us-modern__hero-image about-us-modern__hero-image--placeholder' }}
+        <div class="about-us-modern__floating-note">Built with purpose since 2021</div>
+      </div>
+    </header>
+
+    <div class="about-us-modern__stats" role="list" aria-label="Brand highlights">
+      <article class="about-us-modern__stat" role="listitem">
+        <p class="about-us-modern__stat-value">50K+</p>
+        <p class="about-us-modern__stat-label">Women styled</p>
+      </article>
+      <article class="about-us-modern__stat" role="listitem">
+        <p class="about-us-modern__stat-value">120+</p>
+        <p class="about-us-modern__stat-label">Unique designs</p>
+      </article>
+      <article class="about-us-modern__stat" role="listitem">
+        <p class="about-us-modern__stat-value">98%</p>
+        <p class="about-us-modern__stat-label">Repeat purchase rate</p>
+      </article>
+    </div>
+
+    <section class="about-us-modern__story">
+      <div>
+        <h2 class="about-us-modern__section-title">Our story</h2>
+        <div class="about-us-modern__story-text rte">
+          {{ page.content }}
+        </div>
+      </div>
+      <div class="about-us-modern__values" role="list" aria-label="Brand values">
+        <article class="about-us-modern__value" role="listitem">
+          <h3>Intentional design</h3>
+          <p>Every silhouette is tailored for movement, shape, and all-day comfort.</p>
+        </article>
+        <article class="about-us-modern__value" role="listitem">
+          <h3>Quality first</h3>
+          <p>We source durable fabrics and finish each piece with strict quality checks.</p>
+        </article>
+        <article class="about-us-modern__value" role="listitem">
+          <h3>Community built</h3>
+          <p>Customer feedback directly shapes each release and improvement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-us-modern__timeline-wrap">
+      <h2 class="about-us-modern__section-title">Milestones</h2>
+      <div class="about-us-modern__timeline" role="list" aria-label="Company milestones">
+        <article class="about-us-modern__timeline-item" role="listitem">
+          <p class="about-us-modern__timeline-year">2021</p>
+          <h3>The first drop</h3>
+          <p>Launched with a focused set of modern essentials.</p>
+        </article>
+        <article class="about-us-modern__timeline-item" role="listitem">
+          <p class="about-us-modern__timeline-year">2023</p>
+          <h3>Regional expansion</h3>
+          <p>Scaled operations and improved shipping speed across new regions.</p>
+        </article>
+        <article class="about-us-modern__timeline-item" role="listitem">
+          <p class="about-us-modern__timeline-year">2025</p>
+          <h3>Experience upgrade</h3>
+          <p>Introduced curated edits and a more personalized shopping journey.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-us-modern__cta">
+      <h2>Want to collaborate with us?</h2>
+      <p>Reach out for partnerships, styling requests, or wholesale opportunities.</p>
+      <a class="btn btn-dark" href="/pages/contact-us">Contact us</a>
+    </section>
+  </div>
+</section>

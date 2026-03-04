@@ -1,7 +1,10 @@
+{{ 'footer-modern.css' | asset_url | stylesheet_tag }}
+
 <footer 
   id="footer" 
   class="
     small 
+    footer-modern
     {{ section.settings.bg_color }} 
     {{ section.settings.bg_gradient }}
     {{ section.settings.text_color }} 
@@ -15,7 +18,7 @@
     --bs-bg-opacity: {{ section.settings.bg_opacity | append: '%' }};
     --bs-border-opacity: {{ section.settings.border_opacity | append: '%' }};
   ">
-  <div class="container">
+  <div class="container footer-modern__container">
     <div
       id="footer-mobile" 
       class="d-desktop-none">
@@ -45,9 +48,9 @@
     <div 
       id="footer-desktop" 
       class="d-none d-desktop-block">
-      <div class="row" role="list">
+      <div class="row footer-modern__grid" role="list">
         {% for block in section.blocks %}
-          <div class="footer-block col" role="listitem" {{ block.shopify_attributes }}>
+          <div class="footer-block col footer-modern__block" role="listitem" {{ block.shopify_attributes }}>
             <h3 class="title {{ block.settings.title_font_size }}">
               <span>
                 {{ block.settings.title }}
@@ -63,16 +66,16 @@
     <div 
       id="footer-copyright" 
       class="">
-      <div class="row align-items-center">
+      <div class="row align-items-center footer-modern__meta-row">
         <div class="col-desktop-5">
           {% if section.settings.social_icons %}
-            <div class="social-icons-wrapper text-center text-desktop-start mb-5 mb-desktop-0">
+            <div class="social-icons-wrapper footer-modern__social text-center text-desktop-start mb-5 mb-desktop-0">
               {% render 'social-icons', icon_size: 18, show_title: false %}
             </div>
           {% endif %}
         </div>
         <div class="col-desktop-8">
-          <div class="fs-sm text-center">
+          <div class="fs-sm text-center footer-modern__copyright">
             &copy; {{ 'now' | date: "%Y" }} {{ shop.name | replace: ' (', '<span hidden>' | replace: ')', '</span>' }}.
             {% if section.settings.show_powered_by %}
               Powered by <a href="https://www.shopify.com" target="_blank" rel="sponsored">Shopify</a>
@@ -81,7 +84,7 @@
         </div>
         <div class="col-desktop-5">
           {% if section.settings.show_payment_icons %}
-            <div class="payment-icons-wrapper text-center text-desktop-end mt-5 mt-desktop-0">
+            <div class="payment-icons-wrapper footer-modern__payments text-center text-desktop-end mt-5 mt-desktop-0">
               {% render 'payment-icons' %}
             </div>
           {% endif %}

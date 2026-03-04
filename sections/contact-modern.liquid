@@ -1,0 +1,334 @@
+{{ 'contact-modern.css' | asset_url | stylesheet_tag }}
+
+<section
+  id="contact-modern-{{ section.id }}"
+  class="contact-modern"
+  style="
+    --contact-bg: {{ section.settings.section_bg }};
+    --contact-surface: {{ section.settings.surface_bg }};
+    --contact-text: {{ section.settings.text_color }};
+    --contact-accent: {{ section.settings.accent_color }};
+    --contact-border: {{ section.settings.border_color }};
+  "
+>
+  <div class="contact-modern__shape contact-modern__shape--one" aria-hidden="true"></div>
+  <div class="contact-modern__shape contact-modern__shape--two" aria-hidden="true"></div>
+
+  <div class="container contact-modern__container" style="max-width: {{ section.settings.container_max_width }}px;">
+    <header class="contact-modern__header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="contact-modern__eyebrow">{{ section.settings.eyebrow }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h1 class="contact-modern__title">{{ section.settings.heading }}</h1>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <div class="contact-modern__subtitle rte">{{ section.settings.subheading }}</div>
+      {% endif %}
+      <div class="contact-modern__quickstats" role="list" aria-label="Support highlights">
+        {% if section.settings.stat_one != blank %}
+          <p class="contact-modern__quickstat" role="listitem">{{ section.settings.stat_one }}</p>
+        {% endif %}
+        {% if section.settings.stat_two != blank %}
+          <p class="contact-modern__quickstat" role="listitem">{{ section.settings.stat_two }}</p>
+        {% endif %}
+        {% if section.settings.stat_three != blank %}
+          <p class="contact-modern__quickstat" role="listitem">{{ section.settings.stat_three }}</p>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="contact-modern__layout">
+      <aside class="contact-modern__panel">
+        {% if section.settings.side_title != blank %}
+          <h2 class="contact-modern__panel-title">{{ section.settings.side_title }}</h2>
+        {% endif %}
+        {% if section.settings.side_text != blank %}
+          <div class="contact-modern__panel-text rte">{{ section.settings.side_text }}</div>
+        {% endif %}
+
+        <div class="contact-modern__cards" role="list" aria-label="Contact channels">
+          {% for block in section.blocks %}
+            {% if block.type == 'contact_card' %}
+              <article class="contact-modern__card" role="listitem" {{ block.shopify_attributes }}>
+                <p class="contact-modern__card-label">{{ block.settings.label }}</p>
+                <p class="contact-modern__card-value">{{ block.settings.value }}</p>
+                {% if block.settings.meta != blank %}
+                  <p class="contact-modern__card-meta">{{ block.settings.meta }}</p>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if section.settings.hero_image != blank %}
+          <div class="contact-modern__image-wrap">
+            {{ section.settings.hero_image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'contact-modern__image', alt: section.settings.hero_image.alt | escape }}
+          </div>
+        {% endif %}
+      </aside>
+
+      <div class="contact-modern__form-wrap">
+        <div class="contact-modern__form-intro">
+          {% if section.settings.form_title != blank %}
+            <h2 class="contact-modern__form-title">{{ section.settings.form_title }}</h2>
+          {% endif %}
+          {% if section.settings.form_text != blank %}
+            <p class="contact-modern__form-text">{{ section.settings.form_text }}</p>
+          {% endif %}
+        </div>
+
+        {% form 'contact', class: 'contact-modern__form' %}
+          {% if form.posted_successfully? %}
+            <p class="alert alert-success contact-modern__alert" role="alert">
+              {{ 'general.contact_form.success' | t }}
+            </p>
+          {% endif %}
+
+          {% if form.errors %}
+            <div class="contact-modern__errors">
+              {{ form.errors | default_errors }}
+            </div>
+          {% endif %}
+
+          <div class="contact-modern__grid">
+            <div class="form-floating">
+              <input
+                id="contact-modern-name"
+                class="form-control"
+                type="text"
+                name="contact[name]"
+                value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                placeholder="{{ 'general.contact_form.name' | t }}"
+                required
+              >
+              <label for="contact-modern-name">{{ 'general.contact_form.name' | t }}</label>
+            </div>
+
+            <div class="form-floating">
+              <input
+                id="contact-modern-email"
+                class="form-control"
+                type="email"
+                name="contact[email]"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                placeholder="{{ 'general.contact_form.email' | t }}"
+                spellcheck="false"
+                autocapitalize="off"
+                required
+              >
+              <label for="contact-modern-email">{{ 'general.contact_form.email' | t }}</label>
+            </div>
+
+            <div class="form-floating">
+              <input
+                id="contact-modern-phone"
+                class="form-control"
+                type="tel"
+                name="contact[phone]"
+                value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                placeholder="{{ 'general.contact_form.phone' | t }}"
+                pattern="[0-9\\-\\+\\s\\(\\)]*"
+                autocomplete="tel"
+              >
+              <label for="contact-modern-phone">{{ 'general.contact_form.phone' | t }}</label>
+            </div>
+
+            <div class="form-floating">
+              <input
+                id="contact-modern-subject"
+                class="form-control"
+                type="text"
+                name="contact[subject]"
+                value="{% if form.subject %}{{ form.subject }}{% endif %}"
+                placeholder="Subject"
+              >
+              <label for="contact-modern-subject">Subject</label>
+            </div>
+          </div>
+
+          <div class="form-floating contact-modern__message">
+            <textarea
+              id="contact-modern-message"
+              class="form-control"
+              name="contact[body]"
+              placeholder="{{ 'general.contact_form.message' | t }}"
+              style="height: 220px"
+              required
+            >{{- form.body -}}</textarea>
+            <label for="contact-modern-message">{{ 'general.contact_form.message' | t }}</label>
+          </div>
+
+          <button type="submit" class="btn btn-dark contact-modern__submit">
+            {{ section.settings.button_text | default: 'Send message' }}
+          </button>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact modern",
+  "templates": ["page"],
+  "settings": [
+    {
+      "type": "text",
+      "id": "container_max_width",
+      "label": "Container max-width (px)",
+      "default": "1240"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#f4efe9"
+    },
+    {
+      "type": "color",
+      "id": "surface_bg",
+      "label": "Surface background",
+      "default": "#fffaf5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#161312"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#cb6f35"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e8d8ca"
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Contact Blisskella"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Let's build your next standout look."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Reach our team for styling help, order questions, wholesale inquiries, or collaborations.</p>"
+    },
+    {
+      "type": "text",
+      "id": "stat_one",
+      "label": "Highlight 1",
+      "default": "Avg response: under 24h"
+    },
+    {
+      "type": "text",
+      "id": "stat_two",
+      "label": "Highlight 2",
+      "default": "Human support team"
+    },
+    {
+      "type": "text",
+      "id": "stat_three",
+      "label": "Highlight 3",
+      "default": "Mon - Sat availability"
+    },
+    {
+      "type": "header",
+      "content": "Side panel"
+    },
+    {
+      "type": "text",
+      "id": "side_title",
+      "label": "Panel title",
+      "default": "Direct channels"
+    },
+    {
+      "type": "richtext",
+      "id": "side_text",
+      "label": "Panel text",
+      "default": "<p>Fastest response time is during business hours, Monday to Saturday.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Panel image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Submit button text",
+      "default": "Send message"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form title",
+      "default": "Tell us what you need"
+    },
+    {
+      "type": "text",
+      "id": "form_text",
+      "label": "Form text",
+      "default": "Share a few details and our team will reply with next steps."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact_card",
+      "name": "Contact card",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Email"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "hello@blisskella.com"
+        },
+        {
+          "type": "text",
+          "id": "meta",
+          "label": "Meta text",
+          "default": "Mon - Sat, 9am - 6pm"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact modern",
+      "blocks": [
+        { "type": "contact_card" },
+        { "type": "contact_card" },
+        { "type": "contact_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

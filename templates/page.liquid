@@ -1,10 +1,19 @@
-<article class="page py-10">
-  <div class="container">
-    <h1 class="title mb-4">
-      {{ page.title }}
-    </h1>
-    <div class="description rte">
-      {{ page.content }}
+{% assign page_handle_downcase = page.handle | downcase %}
+{% assign page_title_downcase = page.title | downcase %}
+
+{% if page_handle_downcase == 'about' or page_handle_downcase == 'about-us' or page_title_downcase == 'about us' %}
+  {% render 'about-us-modern-page' %}
+{% elsif page_handle_downcase == 'faq' or page_handle_downcase == 'faqs' or page_title_downcase == 'faq' or page_title_downcase == 'faqs' %}
+  {% section 'faq' %}
+{% else %}
+  <article class="page py-10">
+    <div class="container">
+      <h1 class="title mb-4">
+        {{ page.title }}
+      </h1>
+      <div class="description rte">
+        {{ page.content }}
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+{% endif %}

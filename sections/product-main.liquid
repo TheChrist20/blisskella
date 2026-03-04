@@ -24,19 +24,19 @@
     class="container" 
     style="max-width: {{ section.settings.container_max_width | append: 'px' }};">
     <div 
-      class="product-contents position-relative"
+      class="product-contents product-main__surface position-relative"
       data-quick-view-contents
       data-recently-viewed-set
       data-product-url="{{ product.url }}">
       <a class="visually-hidden-focusable" href="#product-inner-{{ product.id }}">
         {{ 'general.accessibility.skip_product_content' | t }}
       </a>      
-      <div class="row">
-        <div class="col-desktop-9 mb-5 mb-desktop-0">
+      <div class="row product-main__layout">
+        <div class="col-desktop-9 mb-5 mb-desktop-0 product-main__media-col">
           {% render 'product-block-media-gallery' %}
         </div>
-        <div class="col-desktop-9">
-          <div id="product-inner-{{ product.id }}">
+        <div class="col-desktop-9 product-main__info-col">
+          <div id="product-inner-{{ product.id }}" class="product-main__info-panel">
             <product-form>
               {% form 'product', product, data-productid: product.id, data-variants: variants_json %}
                 <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">

@@ -10,6 +10,9 @@
   border-top-style: solid;
   border-bottom-style: solid;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
 
 
@@ -29,9 +32,9 @@
 }
 
 .collection-utilities {
-  display: flex;
+  display: flex !important ;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .sort-by input + label {
@@ -47,6 +50,7 @@
 }
 
 .collection-utilities-controls {
+  margin-top: 1rem;
   gap: 0.6rem !important;
 }
 
@@ -60,6 +64,7 @@
   flex: 1 1 360px;
   min-width: 260px;
   max-width: 560px;
+  margin-right: 0.6rem !important;
 }
 
 .collection-search .form-control-wrapper {
@@ -75,10 +80,11 @@
   background: #ffffff;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   padding-left: 1rem;
-  padding-right: 3rem;
+  padding-right: 2rem;
   font-size: 0.94rem;
   line-height: 1.1;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-right: 0.3rem;
 }
 
 .collection-search .form-control::placeholder {
@@ -128,11 +134,13 @@
 
   .collection-product-count {
     margin-bottom: 0.7rem !important;
+    margin-left: 0.7rem !important;
   }
 
   .collection-utilities-controls {
     display: flex !important;
     gap: 0.45rem !important;
+    margin-top: 0.7rem;
   }
 
   .collection-search {

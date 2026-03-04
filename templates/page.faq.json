@@ -81,6 +81,7 @@
         "border_opacity": 100,
         "container_max_width": "",
         "open_first_item": true,
+        "eyebrow": "Support center",
         "header_title": "FAQ",
         "header_title_font_size": "h1",
         "header_description": "<p>Still need to reach us? Please <a href=\"\/pages\/contact\" title=\"Contact us\">contact us<\/a> anytime.<\/p>",

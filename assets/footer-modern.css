@@ -1,0 +1,114 @@
+#footer.footer-modern {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 30%),
+    linear-gradient(165deg, #080808 0%, #111111 52%, #171717 100%) !important;
+  color: #f1ede8 !important;
+}
+
+#footer.footer-modern .footer-modern__container {
+  position: relative;
+  z-index: 2;
+}
+
+#footer.footer-modern .footer-modern__grid {
+  --bs-gutter-x: clamp(1rem, 2.3vw, 1.8rem);
+}
+
+#footer.footer-modern .footer-modern__block .title {
+  margin-bottom: 0.95rem;
+}
+
+#footer.footer-modern .footer-modern__block .title span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+#footer.footer-modern .footer-modern__block .description {
+  color: rgba(241, 237, 232, 0.78);
+  line-height: 1.68;
+}
+
+#footer.footer-modern .footer-modern__block .btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+#footer.footer-modern .footer-modern__block .btn-wrapper .btn {
+  border-radius: 999px;
+}
+
+#footer.footer-modern .nav-link {
+  color: rgba(241, 237, 232, 0.84) !important;
+  border-radius: 0.6rem;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+#footer.footer-modern .nav-link:hover,
+#footer.footer-modern .nav-link:focus {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.09);
+  transform: translateX(2px);
+}
+
+#footer.footer-modern hr {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+#footer.footer-modern .footer-modern__social .social-icons {
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#footer.footer-modern .footer-modern__social .social-icons a {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#footer.footer-modern .footer-modern__social .social-icons a:hover,
+#footer.footer-modern .footer-modern__social .social-icons a:focus {
+  transform: translateY(-1px);
+}
+
+#footer.footer-modern .footer-modern__copyright,
+#footer.footer-modern .footer-modern__copyright a {
+  color: rgba(241, 237, 232, 0.8) !important;
+}
+
+#footer.footer-modern .footer-modern__copyright a:hover,
+#footer.footer-modern .footer-modern__copyright a:focus {
+  color: #fff !important;
+}
+
+#footer.footer-modern .footer-modern__payments .payment-icons {
+  opacity: 0.9;
+}
+
+#footer.footer-modern #footer-mobile .collapse-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#footer.footer-modern #footer-mobile .collapse-wrapper .heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  padding: 0.9rem 0;
+}
+
+#footer.footer-modern #footer-mobile .collapse-wrapper .collapse-inner {
+  padding: 0.15rem 0 0.8rem;
+}

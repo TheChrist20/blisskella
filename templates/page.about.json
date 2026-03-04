@@ -1,222 +1,148 @@
 {
   "sections": {
-    "hero_carousel_tdHVay": {
-      "type": "hero-carousel",
+    "about_us_modern_HQ3n2W": {
+      "type": "about-us-modern",
       "blocks": {
-        "slide_eGdG3z": {
-          "type": "slide",
+        "stat_1": {
+          "type": "stat",
           "settings": {
-            "img_desktop": "shopify:\/\/shop_images\/lifestyle-1.jpg",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "overlay_blur": 5,
-            "subtitle": "Discover our style",
-            "title": "Welcome to Blisskella",
-            "description": "<p>At Blisskella we curate modern, comfortable clothing that makes you feel confident every day.<\/p>",
-            "btn_primary_text": "",
-            "btn_primary_url": "",
-            "btn_secondary_text": "",
-            "btn_secondary_url": ""
+            "value": "50K+",
+            "label": "Women styled"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "120+",
+            "label": "Unique designs"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "98%",
+            "label": "Repeat purchase rate"
+          }
+        },
+        "value_1": {
+          "type": "value",
+          "settings": {
+            "title": "Intentional design",
+            "description": "Every silhouette is tailored for movement, shape, and all-day comfort."
+          }
+        },
+        "value_2": {
+          "type": "value",
+          "settings": {
+            "title": "Quality first",
+            "description": "We source durable fabrics and finish each piece with strict quality checks."
+          }
+        },
+        "value_3": {
+          "type": "value",
+          "settings": {
+            "title": "Community built",
+            "description": "Customer feedback directly shapes each release and improvement."
+          }
+        },
+        "milestone_1": {
+          "type": "milestone",
+          "settings": {
+            "year": "2021",
+            "title": "The first drop",
+            "description": "Launched with a focused set of modern essentials."
+          }
+        },
+        "milestone_2": {
+          "type": "milestone",
+          "settings": {
+            "year": "2023",
+            "title": "Regional expansion",
+            "description": "Scaled operations and improved shipping speed across new regions."
+          }
+        },
+        "milestone_3": {
+          "type": "milestone",
+          "settings": {
+            "year": "2025",
+            "title": "Experience upgrade",
+            "description": "Introduced curated edits and a more personalized shopping journey."
+          }
+        },
+        "member_1": {
+          "type": "team_member",
+          "settings": {
+            "name": "Kella Brown",
+            "role": "Founder & Creative Director"
+          }
+        },
+        "member_2": {
+          "type": "team_member",
+          "settings": {
+            "name": "Maya Cole",
+            "role": "Head of Merchandising"
+          }
+        },
+        "member_3": {
+          "type": "team_member",
+          "settings": {
+            "name": "Jade Lewis",
+            "role": "Operations Lead"
+          }
+        },
+        "member_4": {
+          "type": "team_member",
+          "settings": {
+            "name": "Nora Grant",
+            "role": "Customer Experience"
           }
         }
       },
       "block_order": [
-        "slide_eGdG3z"
+        "stat_1",
+        "stat_2",
+        "stat_3",
+        "value_1",
+        "value_2",
+        "value_3",
+        "milestone_1",
+        "milestone_2",
+        "milestone_3",
+        "member_1",
+        "member_2",
+        "member_3",
+        "member_4"
       ],
       "settings": {
-        "bg_color": "bg-body",
-        "bg_opacity": 100,
-        "bg_gradient": "",
-        "text_color": "text-white",
-        "border_top_width": 0,
-        "border_bottom_width": 0,
-        "border_color": "border-body",
-        "border_opacity": 100,
-        "carousel_controls": true,
-        "carousel_indicators": true,
-        "carousel_transition": "slide",
-        "carousel_transition_duration": 500,
-        "carousel_autoplay": 5,
-        "carousel_effect": "carousel-zoom-in",
-        "media_mobile_height": 400,
-        "media_desktop_height": 500,
-        "media_adapt": false,
-        "media_full": false,
-        "caption_max_width": "900",
-        "caption_position": "carousel-caption-center",
-        "subtitle_font_size": "fs-md",
-        "title_font_size": "h2",
-        "description_font_size": "fs-lg",
-        "btn_primary_color": "btn-primary",
-        "btn_secondary_color": "btn-secondary",
-        "btn_font_size": "fs-md",
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "18e3bb8e-f1ba-421c-91c3-37c1c5b25a2a": {
-      "type": "separator",
-      "disabled": true,
-      "settings": {
-        "bg_color": "bg-body text-body",
-        "bg_opacity": 10,
-        "height": 1,
-        "container": "true",
-        "container_max_width": "",
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "91fa2e27-741f-431f-b658-c6ce03d0f6eb": {
-      "type": "page-content",
-      "settings": {
-        "bg_color": "bg-body",
-        "bg_opacity": 100,
-        "bg_gradient": "",
-        "text_color": "text-body",
-        "border_top_width": 0,
-        "border_bottom_width": 0,
-        "border_color": "border-body",
-        "border_opacity": 10,
-        "container_max_width": "800",
-        "show_title": true,
-        "title_font_size": "h1",
-        "description_font_size": "fs-md",
-        "pt": 9,
-        "pb": 9
-      }
-    },
-    "54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e": {
-      "type": "card-list",
-      "blocks": {
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-1": {
-          "type": "item",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/product-1_baca2f7d-a8b0-4db2-aa52-c4074f562b1d.jpg",
-            "title": "John Doe",
-            "description": "<p>CEO & Founder<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
-          }
-        },
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-2": {
-          "type": "item",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/product-5_4bfb97ab-4193-4461-a4e3-6e06d63b8249.jpg",
-            "title": "Jane Doe",
-            "description": "<p>Marketing<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
-          }
-        },
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-4": {
-          "type": "item",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/product-3.jpg",
-            "title": "Jim Doe",
-            "description": "<p>Sales<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
-          }
-        },
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-3": {
-          "type": "item",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/product-2_51119e0e-dd95-4bc4-85bc-2db1278575ad.jpg",
-            "title": "Jill Doe",
-            "description": "<p>Developer<\/p>",
-            "btn_text": "Learn more",
-            "btn_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-1",
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-2",
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-4",
-        "template--15889379819659__54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e-item-3"
-      ],
-      "settings": {
-        "bg_color": "bg-gradient-body-light text-body",
-        "bg_opacity": 100,
-        "bg_gradient": "",
-        "text_color": "text-body",
-        "border_top_width": 0,
-        "border_bottom_width": 0,
-        "border_color": "border-body",
-        "border_opacity": 100,
-        "container_max_width": "",
-        "header_title": "Our Team",
-        "header_title_font_size": "h2",
-        "header_description": "<p>Add on optional description for this section<\/p>",
-        "header_description_font_size": "fs-md",
-        "item_bg_color": "bg-body",
-        "item_bg_opacity": 100,
-        "item_text_color": "text-body",
-        "item_border_width": 1,
-        "item_border_color": "border-body",
-        "item_border_opacity": 100,
-        "item_shadow": "shadow-sm",
-        "item_text_align": "text-center",
-        "item_img_orientation": "ratio-4x3",
-        "item_title_font_size": "h5",
-        "item_description_font_size": "fs-md",
-        "item_btn_color": "btn-primary",
-        "item_btn_size": "btn-sm",
-        "breakpoint_mobile": 1,
-        "breakpoint_tablet": 2,
-        "breakpoint_desktop": 4,
-        "pt": 6,
-        "pb": 11
-      }
-    },
-    "664feedb-7180-4e8f-a84d-1cf45bc1dd42": {
-      "type": "richtext",
-      "settings": {
-        "bg_color": "bg-body",
-        "bg_opacity": 100,
-        "bg_gradient": "",
-        "text_color": "text-body",
-        "border_top_width": 0,
-        "border_bottom_width": 0,
-        "border_color": "border-body",
-        "border_opacity": 100,
-        "container_max_width": "900",
-        "text_align": "text-center",
-        "title": "Want to get in touch?!",
-        "title_font_size": "h3",
-        "description": "<p>Please contact us anytime from Monday to Friday<\/p>",
-        "description_font_size": "",
-        "btn_primary_text": "Contact us",
-        "btn_primary_url": "shopify:\/\/pages\/contact-us",
-        "btn_primary_color": "btn-outline-primary",
-        "btn_secondary_text": "",
-        "btn_secondary_url": "",
-        "btn_secondary_color": "btn-secondary",
-        "pt": 6,
-        "pb": 12
-      }
-    },
-    "cfc6ff50-e3a5-4219-8350-f2db73f829c8": {
-      "type": "separator",
-      "disabled": true,
-      "settings": {
-        "bg_color": "bg-light text-body",
-        "bg_opacity": 10,
-        "height": 1,
-        "container": "container",
-        "container_max_width": "",
-        "pt": 0,
-        "pb": 0
+        "container_max_width": "1240",
+        "section_bg": "#f6f1ea",
+        "section_text": "#181412",
+        "surface_color": "#fffaf5",
+        "accent_color": "#c66a2b",
+        "accent_soft_color": "#f3d9c2",
+        "border_color": "#ead8c9",
+        "eyebrow": "About Blisskella",
+        "heading": "Designed for women who move with confidence.",
+        "subheading": "<p>We blend clean silhouettes, bold details, and practical comfort to create pieces that feel effortless all day.</p>",
+        "hero_image": "shopify:\/\/shop_images\/lifestyle-2.jpg",
+        "floating_note": "Built with purpose since 2021",
+        "primary_button_label": "Shop latest drop",
+        "primary_button_url": "shopify:\/\/collections\/all",
+        "secondary_button_label": "View contact",
+        "secondary_button_url": "shopify:\/\/pages\/contact-us",
+        "story_heading": "Our story",
+        "show_page_content": true,
+        "story_text": "<p>Start with a clear point of view and add details that show what your brand stands for.</p>",
+        "timeline_heading": "Milestones",
+        "team_heading": "Meet the team",
+        "cta_heading": "Want to collaborate with us?",
+        "cta_text": "Reach out for partnerships, styling requests, or wholesale opportunities.",
+        "cta_button_label": "Contact us",
+        "cta_button_url": "shopify:\/\/pages\/contact-us"
       }
     }
   },
   "order": [
-    "hero_carousel_tdHVay",
-    "18e3bb8e-f1ba-421c-91c3-37c1c5b25a2a",
-    "91fa2e27-741f-431f-b658-c6ce03d0f6eb",
-    "54fb0ae0-8c55-432c-8b0a-1211e6ba4a0e",
-    "664feedb-7180-4e8f-a84d-1cf45bc1dd42",
-    "cfc6ff50-e3a5-4219-8350-f2db73f829c8"
+    "about_us_modern_HQ3n2W"
   ]
 }

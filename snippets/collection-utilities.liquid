@@ -10,7 +10,7 @@
   endfor
 %}
 
-<div class="collection-utilities mb-5 {% unless section.settings.show_product_count %}justify-content-end{% endunless %}">
+<div class="collection-utilities mb-5 {% unless section.settings.show_product_count %} {% endunless %}">
   {% if section.settings.show_product_count %}
     <p class="collection-product-count small mb-0">
       {{ 'collection.count_products' | t: count: collection.products_count }}
