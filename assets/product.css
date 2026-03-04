@@ -1070,10 +1070,10 @@ body .shopify_subscriptions_app_policy {
 }
 
 .product-main .product-block-collapse .collapse-wrapper {
-  background: #faf8f5;
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.09) !important;
   border-radius: 0.85rem;
-  padding: 0 0.8rem !important;
+  padding: 0 0 !important;
 }
 
 .product-main .product-block-collapse .collapse-wrapper > button {
