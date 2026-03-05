@@ -966,6 +966,7 @@ body .shopify_subscriptions_app_policy {
 .product-main__info-panel form {
   display: grid;
   gap: 0.85rem;
+  padding: 1rem;
 }
 
 .product-main .product-title {
