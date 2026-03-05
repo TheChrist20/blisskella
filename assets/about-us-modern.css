@@ -1,9 +1,7 @@
 .about-us-modern {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 0% 10%, rgba(243, 217, 194, 0.55) 0%, rgba(243, 217, 194, 0) 36%),
-              radial-gradient(circle at 100% 0%, rgba(198, 106, 43, 0.16) 0%, rgba(198, 106, 43, 0) 40%),
-              var(--about-bg);
+  background: #ffffff;
   color: var(--about-text);
   padding: clamp(3.5rem, 7vw, 7rem) 0;
 }
@@ -26,7 +24,7 @@
   height: 280px;
   top: -90px;
   left: -80px;
-  background: rgba(243, 217, 194, 0.75);
+  background: rgba(var(--app-rose-rgb), 0.1);
 }
 
 .about-us-modern__orb--two {
@@ -34,7 +32,7 @@
   height: 220px;
   right: -70px;
   bottom: 120px;
-  background: rgba(198, 106, 43, 0.18);
+  background: rgba(var(--app-mint-rgb), 0.12);
 }
 
 .about-us-modern__hero {
