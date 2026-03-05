@@ -1607,3 +1607,216 @@ html, body {
     padding: 0.1rem 0.9rem 0.9rem !important;
   }
 }
+
+/* App-wide palette harmonization
+   Keeps footer, hero carousel button styles, and product details page untouched. */
+:root {
+  --ui-surface: #ffffff;
+  --ui-surface-soft: rgba(var(--app-mint-rgb), 0.08);
+  --ui-text: var(--app-ink);
+  --ui-text-muted: rgba(var(--app-ink-rgb), 0.68);
+  --ui-border: rgba(var(--app-ink-rgb), 0.12);
+  --ui-accent: var(--app-rose);
+  --ui-accent-rgb: var(--app-rose-rgb);
+  --ui-accent-soft: rgba(var(--app-rose-rgb), 0.12);
+  --ui-accent-alt: var(--app-mint);
+  --ui-accent-alt-rgb: var(--app-mint-rgb);
+}
+
+body:not(.page-type-product) #main {
+  background-color: var(--ui-surface);
+  color: var(--ui-text);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) {
+  background-color: var(--ui-surface) !important;
+  color: var(--ui-text);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) a {
+  color: var(--ui-accent);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) a:hover,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) a:focus {
+  color: rgba(var(--ui-accent-rgb), 0.88);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .card,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .accordion-item,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .list-group-item,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .newsletter-modern__panel,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .faq-modern .accordion-item {
+  background: #ffffff;
+  border-color: var(--ui-border);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .btn-primary {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: var(--ui-accent);
+  --bs-btn-border-color: var(--ui-accent);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: rgba(var(--ui-accent-rgb), 0.9);
+  --bs-btn-hover-border-color: rgba(var(--ui-accent-rgb), 0.9);
+  --bs-btn-focus-shadow-rgb: var(--ui-accent-rgb);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: rgba(var(--ui-accent-rgb), 0.82);
+  --bs-btn-active-border-color: rgba(var(--ui-accent-rgb), 0.82);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .btn-secondary {
+  --bs-btn-color: var(--ui-text);
+  --bs-btn-bg: var(--ui-accent-alt);
+  --bs-btn-border-color: var(--ui-accent-alt);
+  --bs-btn-hover-color: var(--ui-text);
+  --bs-btn-hover-bg: rgba(var(--ui-accent-alt-rgb), 0.86);
+  --bs-btn-hover-border-color: rgba(var(--ui-accent-alt-rgb), 0.86);
+  --bs-btn-focus-shadow-rgb: var(--ui-accent-alt-rgb);
+  --bs-btn-active-color: var(--ui-text);
+  --bs-btn-active-bg: rgba(var(--ui-accent-alt-rgb), 0.78);
+  --bs-btn-active-border-color: rgba(var(--ui-accent-alt-rgb), 0.78);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .btn-outline-primary {
+  --bs-btn-color: var(--ui-accent);
+  --bs-btn-border-color: var(--ui-accent);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--ui-accent);
+  --bs-btn-hover-border-color: var(--ui-accent);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .btn-outline-secondary {
+  --bs-btn-color: var(--ui-text);
+  --bs-btn-border-color: var(--ui-accent-alt);
+  --bs-btn-hover-color: var(--ui-text);
+  --bs-btn-hover-bg: var(--ui-accent-alt);
+  --bs-btn-hover-border-color: var(--ui-accent-alt);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .form-control,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .form-select {
+  background-color: #ffffff;
+  color: var(--ui-text);
+  border-color: var(--ui-border);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .form-control:focus,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .form-select:focus {
+  border-color: rgba(var(--ui-accent-rgb), 0.55);
+  box-shadow: 0 0 0 0.2rem rgba(var(--ui-accent-rgb), 0.15);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .subtitle,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .section-description,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .description {
+  color: var(--ui-text-muted);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .badge,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .wishlist-count-badge {
+  background-color: var(--ui-accent) !important;
+  color: #ffffff !important;
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .nav-link.active,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .accordion-button:not(.collapsed) {
+  color: var(--ui-accent);
+  background-color: var(--ui-accent-soft);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .progress-bar {
+  background-color: var(--ui-accent);
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .product-card-price-final,
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .text-accent-2 {
+  color: var(--ui-accent-alt) !important;
+}
+
+body:not(.page-type-product) #main > :not(.hero-carousel):not(.product-main) .product-sale-badge {
+  background: var(--ui-accent);
+  color: #ffffff;
+}
+
+/* About us page: force stats + milestone accents to app palette */
+.about-us-modern {
+  --about-accent: var(--ui-accent) !important;
+  --about-accent-soft: rgba(var(--ui-accent-alt-rgb), 0.22) !important;
+  --about-bg: #ffffff !important;
+  --about-surface: #ffffff !important;
+  --about-border: var(--ui-border) !important;
+}
+
+.about-us-modern__stat-value {
+  color: var(--ui-accent) !important;
+}
+
+.about-us-modern__timeline-item::before {
+  background: linear-gradient(180deg, var(--ui-accent), rgba(var(--ui-accent-alt-rgb), 0.45)) !important;
+}
+
+.about-us-modern__timeline-item::after {
+  background: radial-gradient(circle, rgba(var(--ui-accent-rgb), 0.18) 0%, rgba(var(--ui-accent-rgb), 0) 70%) !important;
+}
+
+.about-us-modern__timeline-year {
+  color: var(--ui-accent) !important;
+  background: rgba(var(--ui-accent-rgb), 0.12) !important;
+  border-color: rgba(var(--ui-accent-rgb), 0.28) !important;
+}
+
+/* Final palette enforcement across non-exempt pages */
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) {
+  background-color: #ffffff !important;
+  color: var(--ui-text) !important;
+}
+
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) :is(.card, .accordion-item, .collection-card-link, .newsletter-modern__panel, .contact-modern__panel, .contact-modern__form-wrap, .about-us-modern__stat, .about-us-modern__timeline-item, .about-us-modern__value) {
+  background: #ffffff !important;
+  border-color: var(--ui-border) !important;
+  color: var(--ui-text) !important;
+}
+
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) :is(.section-description, .subtitle, .description, .contact-modern__subtitle, .contact-modern__panel-text, .faq-modern .accordion-body, .about-us-modern__stat-label, .about-us-modern__story-text, .about-us-modern__timeline-item p) {
+  color: var(--ui-text-muted) !important;
+}
+
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) :is(.btn-dark, .btn-primary) {
+  --bs-btn-color: #ffffff !important;
+  --bs-btn-bg: var(--ui-accent) !important;
+  --bs-btn-border-color: var(--ui-accent) !important;
+  --bs-btn-hover-color: #ffffff !important;
+  --bs-btn-hover-bg: rgba(var(--ui-accent-rgb), 0.9) !important;
+  --bs-btn-hover-border-color: rgba(var(--ui-accent-rgb), 0.9) !important;
+}
+
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) :is(.btn-outline-dark, .btn-outline-primary) {
+  --bs-btn-color: var(--ui-accent) !important;
+  --bs-btn-border-color: var(--ui-accent) !important;
+  --bs-btn-hover-color: #ffffff !important;
+  --bs-btn-hover-bg: var(--ui-accent) !important;
+  --bs-btn-hover-border-color: var(--ui-accent) !important;
+}
+
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) :is(.form-control, .form-select) {
+  background: #ffffff !important;
+  border-color: var(--ui-border) !important;
+  color: var(--ui-text) !important;
+}
+
+body:not(.page-type-product) #main :is(.faq, .faq-modern, .contact-modern, .collection-header, .collection-products, .featured-products, .featured-collections, .newsletter, .newsletter-modern, .media-with-text, .card-list, .card-slider, .blog-main, .blog-slider, .contact-form-section, .wishlist-main) :is(.form-control:focus, .form-select:focus) {
+  border-color: rgba(var(--ui-accent-rgb), 0.55) !important;
+  box-shadow: 0 0 0 0.2rem rgba(var(--ui-accent-rgb), 0.15) !important;
+}
+
+body:not(.page-type-product) #main :is(.about-us-modern, .faq.faq-modern, .contact-modern) {
+  background: #ffffff !important;
+}
+
+body:not(.page-type-product) #main :is(.about-us-modern .about-us-modern__orb--one, .faq.faq-modern .faq-modern__accordion-col::before, .contact-modern .contact-modern__shape--one) {
+  background: rgba(var(--ui-accent-rgb), 0.14) !important;
+}
+
+body:not(.page-type-product) #main :is(.about-us-modern .about-us-modern__orb--two, .contact-modern .contact-modern__shape--two) {
+  background: rgba(var(--ui-accent-alt-rgb), 0.16) !important;
+}

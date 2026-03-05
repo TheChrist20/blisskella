@@ -139,7 +139,7 @@
   margin: 0;
   font-size: clamp(1.6rem, 3vw, 2.5rem);
   line-height: 0.95;
-  color: var(--about-accent);
+  color: var(--app-rose);
   font-weight: 700;
 }
 
@@ -219,7 +219,7 @@
   position: absolute;
   inset: 0 auto 0 0;
   width: 4px;
-  background: linear-gradient(180deg, var(--about-accent), rgba(198, 106, 43, 0.2));
+  background: linear-gradient(180deg, var(--app-rose), rgba(var(--app-mint-rgb), 0.45));
 }
 
 .about-us-modern__timeline-item::after {
@@ -230,27 +230,27 @@
   width: 120px;
   height: 120px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(198, 106, 43, 0.18) 0%, rgba(198, 106, 43, 0) 70%);
+  background: radial-gradient(circle, rgba(var(--app-rose-rgb), 0.18) 0%, rgba(var(--app-rose-rgb), 0) 70%);
   pointer-events: none;
 }
 
 .about-us-modern__timeline-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 34px rgba(24, 20, 18, 0.12);
-  border-color: rgba(198, 106, 43, 0.45);
+  border-color: rgba(var(--app-rose-rgb), 0.45);
 }
 
 .about-us-modern__timeline-year {
   display: inline-flex;
   align-items: center;
   margin: 0;
-  color: var(--about-accent);
+  color: var(--app-rose);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: rgba(198, 106, 43, 0.14);
-  border: 1px solid rgba(198, 106, 43, 0.28);
+  background: rgba(var(--app-rose-rgb), 0.12);
+  border: 1px solid rgba(var(--app-rose-rgb), 0.28);
   border-radius: 999px;
   padding: 0.28rem 0.6rem;
 }
