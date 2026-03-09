@@ -7,7 +7,7 @@
           "type": "stat",
           "settings": {
             "value": "50K+",
-            "label": "Women styled"
+            "label": "Women styled in clothing & accessories"
           }
         },
         "stat_2": {
@@ -28,14 +28,14 @@
           "type": "value",
           "settings": {
             "title": "Intentional design",
-            "description": "Every silhouette is tailored for movement, shape, and all-day comfort."
+            "description": "Every silhouette and accessory is selected for movement, style, and all-day comfort."
           }
         },
         "value_2": {
           "type": "value",
           "settings": {
             "title": "Quality first",
-            "description": "We source durable fabrics and finish each piece with strict quality checks."
+            "description": "We source durable materials and finish each piece and accessory with strict quality checks."
           }
         },
         "value_3": {
@@ -122,8 +122,8 @@
         "accent_soft_color": "#f3d9c2",
         "border_color": "#ead8c9",
         "eyebrow": "About Blisskella",
-        "heading": "Designed for women who move with confidence.",
-        "subheading": "<p>We blend clean silhouettes, bold details, and practical comfort to create pieces that feel effortless all day.</p>",
+        "heading": "Designed for women who move with confidence and style.",
+        "subheading": "<p>We blend clean silhouettes, bold details, and practical comfort to create clothing and accessories that feel effortless all day.</p>",
         "hero_image": "shopify:\/\/shop_images\/lifestyle-2.jpg",
         "floating_note": "Built with purpose since 2021",
         "primary_button_label": "Shop latest drop",
@@ -146,3 +146,4 @@
     "about_us_modern_HQ3n2W"
   ]
 }
+

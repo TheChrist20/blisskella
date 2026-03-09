@@ -20,9 +20,9 @@
             "overlay_color": "#000000",
             "overlay_opacity": 10,
             "overlay_blur": 2,
-            "subtitle": "Feel the bliss in every stitch",
+            "subtitle": "Feel the bliss in every detail",
             "title": "Welcome to Blisskella",
-            "description": "<p>Premium fashion clothing inspired by simplicity and elegance.</p>",
+            "description": "<p>Premium fashion clothing and accessories inspired by simplicity and elegance.</p>",
             "btn_primary_text": "Shop Now",
             "btn_primary_url": "shopify://collections/all",
             "btn_secondary_text": "Learn More",
@@ -56,7 +56,7 @@
             "overlay_blur": 2,
             "subtitle": "Blisskella",
             "title": "Elevate Your Style",
-            "description": "<p>Premium fashion clothing for the modern you.</p>",
+            "description": "<p>Premium fashion clothing and accessories for the modern you.</p>",
             "btn_primary_text": "Shop now",
             "btn_primary_url": "shopify://collections/all",
             "btn_secondary_text": "View collection",
@@ -135,7 +135,7 @@
         "recommended_mode_intent": "related",
         "header_title": "Featured Products",
         "header_title_font_size": "h3",
-        "header_description": "<p>Handpicked wardrobe essentials and standout pieces to elevate your everyday look.</p>",
+        "header_description": "<p>Handpicked wardrobe essentials and statement accessories to elevate your everyday look.</p>",
         "header_description_font_size": "fs-md",
         "slider_speed": 300,
         "slider_navigation": true,
@@ -177,10 +177,10 @@
             "external_video": "",
             "text_align_mobile": "text-center",
             "text_align_desktop": "text-desktop-start",
-            "subtitle": "Curated Premium Fashion",
-            "title": "Discover Elegant Collections",
+            "subtitle": "Curated Fashion & Accessories",
+            "title": "Discover Elegant Clothing & Accessories",
             "title_font_size": "h2",
-            "description": "<p>Experience refined silhouettes and premium fabrics — shop thoughtfully curated collections that blend timeless elegance with modern sensibility.</p>",
+            "description": "<p>Experience refined silhouettes, premium materials, and statement accessories — shop thoughtfully curated collections that blend timeless elegance with modern sensibility.</p>",
             "description_font_size": "fs-md",
             "btn_primary_text": "Shop Collection",
             "btn_primary_url": "shopify://collections",
@@ -289,8 +289,8 @@
         "item_VPnR9Q": {
           "type": "item",
           "settings": {
-            "title": "Beautiful Fabrics",
-            "description": "<p>\"Beautiful fabrics and an effortless fit — these pieces have become staples in my wardrobe. The attention to detail is clear.\"</p>",
+            "title": "Beautiful Quality",
+            "description": "<p>\"Beautiful materials, standout accessories, and an effortless fit — these pieces have become staples in my wardrobe. The attention to detail is clear.\"</p>",
             "author": "Liam S., London",
             "author_subtitle": "Verified Customer"
           }
@@ -317,7 +317,7 @@
           "type": "item",
           "settings": {
             "title": "Compliment Magnet",
-            "description": "<p>\"I get compliments every time I wear their dresses. The pieces feel special and always draw attention for the right reasons.\"</p>",
+            "description": "<p>\"I get compliments every time I wear their outfits and accessories. The pieces feel special and always draw attention for the right reasons.\"</p>",
             "author": "Ava L., Los Angeles",
             "author_subtitle": "Verified Customer"
           }
@@ -326,7 +326,7 @@
           "type": "item",
           "settings": {
             "title": "Worth the Investment",
-            "description": "<p>\"Quality matches the premium price — worth every cent. These garments have become wardrobe anchors for me.\"</p>",
+            "description": "<p>\"Quality matches the premium price — worth every cent. These pieces and accessories have become wardrobe anchors for me.\"</p>",
             "author": "Ethan C., San Francisco",
             "author_subtitle": "Verified Customer"
           }
@@ -388,3 +388,4 @@
     "testimonials_eFtnyC"
   ]
 }
+
