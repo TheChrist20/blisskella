@@ -3,7 +3,7 @@
   overflow: hidden;
   padding-top: calc(var(--header-height, 0px) + 2rem) !important;
   background:
-    radial-gradient(circle at 5% 8%, rgba(198, 106, 43, 0.14), rgba(198, 106, 43, 0) 30%),
+    radial-gradient(circle at 5% 8%, #ef626b71, #ef626b27 30%),
     radial-gradient(circle at 95% 12%, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0) 28%),
     #f4efe9 !important;
 }
@@ -35,9 +35,9 @@
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid rgba(198, 106, 43, 0.34);
-  background: rgba(198, 106, 43, 0.12);
-  color: #ef626c;
+  border: 1px solid #ef626b91;
+  background: #ef626b91;
+  color: #fff;
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;

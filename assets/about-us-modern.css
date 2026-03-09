@@ -24,7 +24,7 @@
   height: 280px;
   top: -90px;
   left: -80px;
-  background: rgba(var(--app-rose-rgb), 0.1);
+  background: #ef626b3f;
 }
 
 .about-us-modern__orb--two {
@@ -32,7 +32,7 @@
   height: 220px;
   right: -70px;
   bottom: 120px;
-  background: rgba(var(--app-mint-rgb), 0.12);
+  background:#ef626b3f;
 }
 
 .about-us-modern__hero {
@@ -47,7 +47,7 @@
   display: inline-flex;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  background: rgba(243, 217, 194, 0.6);
+  background: #ef626b46;
   border: 1px solid var(--about-border);
   font-size: 0.82rem;
   font-weight: 700;
@@ -86,8 +86,8 @@
   border-radius: 1.4rem;
   overflow: hidden;
   min-height: 300px;
-  background: var(--about-surface);
-  border: 1px solid var(--about-border);
+  background: #ef626b3f;
+  border: 1px solid #ef626b3f;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
 }
 
@@ -127,8 +127,8 @@
 }
 
 .about-us-modern__stat {
-  background: var(--about-surface);
-  border: 1px solid var(--about-border);
+  background: #fff;
+  border: 1px solid #ef626b3f;
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -172,7 +172,7 @@
 }
 
 .about-us-modern__value {
-  background: var(--about-surface);
+  background: #fff;
   border: 1px solid var(--about-border);
   border-radius: 0.9rem;
   padding: 1rem;
@@ -314,7 +314,7 @@
   margin-top: clamp(2.4rem, 4.5vw, 3.8rem);
   border-radius: 1rem;
   border: 1px solid var(--about-border);
-  background: linear-gradient(135deg, rgba(243, 217, 194, 0.4), var(--about-surface));
+  background: linear-gradient(135deg, #ef626b36, var(--about-surface));
   padding: clamp(1.2rem, 2.3vw, 2rem);
 }
 

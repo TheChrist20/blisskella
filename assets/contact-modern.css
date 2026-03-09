@@ -100,8 +100,8 @@
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: var(--contact-accent);
-  box-shadow: 0 0 0 5px rgba(203, 111, 53, 0.16);
+  background: #ef626b91;
+  box-shadow: 0 0 0 5px #ef626b62;
 }
 
 .contact-modern__layout {

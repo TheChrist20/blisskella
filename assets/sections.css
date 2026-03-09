@@ -728,8 +728,8 @@ body.navbar-dropdown-open #footer-group::after {
 */
 .testimonials {
   display: block;
-  border-top-style: solid;
-  border-bottom-style: solid;
+  border-top-style: none;
+  border-bottom-style: none;
 }
 
 .testimonials .card {
