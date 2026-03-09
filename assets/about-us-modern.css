@@ -24,7 +24,7 @@
   height: 280px;
   top: -90px;
   left: -80px;
-  background: #ef626b3f;
+  background: #83333828;
 }
 
 .about-us-modern__orb--two {
@@ -32,7 +32,7 @@
   height: 220px;
   right: -70px;
   bottom: 120px;
-  background:#ef626b3f;
+  background:#83333828;
 }
 
 .about-us-modern__hero {
@@ -47,10 +47,11 @@
   display: inline-flex;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  background: #ef626b46;
+  background: #ef626b5d;
   border: 1px solid var(--about-border);
   font-size: 0.82rem;
   font-weight: 700;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -86,8 +87,8 @@
   border-radius: 1.4rem;
   overflow: hidden;
   min-height: 300px;
-  background: #ef626b3f;
-  border: 1px solid #ef626b3f;
+  background: #83333828;
+  border: 1px solid #83333828;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
 }
 
@@ -218,6 +219,7 @@
   inset: 0 auto 0 0;
   width: 4px;
   background: linear-gradient(180deg, var(--app-rose), rgba(var(--app-mint-rgb), 0.45));
+  opacity: 0.5;
 }
 
 .about-us-modern__timeline-item::after {
@@ -228,7 +230,7 @@
   width: 120px;
   height: 120px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(var(--app-rose-rgb), 0.18) 0%, rgba(var(--app-rose-rgb), 0) 70%);
+  background: #fff;
   pointer-events: none;
 }
 
@@ -314,7 +316,7 @@
   margin-top: clamp(2.4rem, 4.5vw, 3.8rem);
   border-radius: 1rem;
   border: 1px solid var(--about-border);
-  background: linear-gradient(135deg, #ef626b36, var(--about-surface));
+  background: linear-gradient(135deg, #ef626b07, var(--about-surface));
   padding: clamp(1.2rem, 2.3vw, 2rem);
 }
 
@@ -327,6 +329,30 @@
   margin: 0.6rem 0 1rem;
   max-width: 62ch;
   color: rgba(24, 20, 18, 0.75);
+}
+
+.btn .btn-dark {
+  background: var(--app-rose);
+  border-color: var(--app-rose);
+  color: #fff;
+}
+
+.btn .btn-dark:hover {
+  background: var(--app-rose);
+  border-color: var(--app-rose);
+  color: #fff;
+  opacity: 0.9;
+}
+
+.btn .btn-outline-dark {
+  border: 1px solid #141414;
+  color: #141414;
+}
+
+.btn .btn-outline-dark:hover {
+  border: 1px solid #141414;
+  color: #fff;
+  background: rgba(20, 20, 20, 0.04);
 }
 
 .about-us-modern__cta .btn {
