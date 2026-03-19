@@ -15,8 +15,8 @@
         "slide_Q4UPQq": {
           "type": "slide",
           "settings": {
-            "img_mobile": "shopify://shop_images/potrait-of-a-fashionista-female-with-pink-bakground.png",
-            "img_desktop": "shopify://shop_images/hero-1.jpg",
+            "img_mobile": "shopify://shop_images/sensual-woman-towel.jpg",
+            "img_desktop": "shopify://shop_images/sensual-woman-towel.jpg",
             "overlay_color": "#000000",
             "overlay_opacity": 10,
             "overlay_blur": 2,
@@ -32,8 +32,8 @@
         "slide_TddqxQ": {
           "type": "slide",
           "settings": {
-            "img_mobile": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
-            "img_desktop": "shopify://shop_images/hero-2.jpg",
+            "img_mobile": "shopify://shop_images/Women_clothing.jpg",
+            "img_desktop": "shopify://shop_images/Women_clothing.jpg",
             "overlay_color": "#000000",
             "overlay_opacity": 10,
             "overlay_blur": 2,
@@ -49,8 +49,8 @@
         "slide_XYZ123": {
           "type": "slide",
           "settings": {
-            "img_mobile": "shopify://shop_images/portrait-young-beautiful-woman-with-red-dress.jpg",
-            "img_desktop": "shopify://shop_images/hero-3.jpg",
+            "img_mobile": "shopify://shop_images/Beauty.jpg",
+            "img_desktop": "shopify://shop_images/Beauty.jpg",
             "overlay_color": "#000000",
             "overlay_opacity": 10,
             "overlay_blur": 2,
@@ -388,4 +388,3 @@
     "testimonials_eFtnyC"
   ]
 }
-
