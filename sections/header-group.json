@@ -18,7 +18,7 @@
           "type": "mobile",
           "settings": {
             "container_max_width": "",
-            "logo_height": 36,
+            "logo_height": 100,
             "main_menu": "",
             "collections_menu": "",
             "social_icons": true,
@@ -30,7 +30,8 @@
           "type": "desktop",
           "settings": {
             "container_max_width": "",
-            "logo_height": 36,
+            "logo": "shopify://shop_images/Blisskella_Logo-removebg-preview_48cba7d2-e049-4c5f-98af-fcdba7ef3f10.png",
+            "logo_height": 100,
             "main_menu": "",
             "pt": 5,
             "pb": 5
