@@ -378,6 +378,80 @@
         "pt": 14,
         "pb": 14
       }
+    },
+    "featured_collections_YbPBik": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_eH87j4": {
+          "type": "collection",
+          "settings": {
+            "collection": "tops-and-sets",
+            "title": ""
+          }
+        },
+        "collection_qM7W36": {
+          "type": "collection",
+          "settings": {
+            "collection": "bottoms",
+            "title": ""
+          }
+        },
+        "collection_cJTtdE": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories",
+            "title": ""
+          }
+        },
+        "collection_pVXX9U": {
+          "type": "collection",
+          "settings": {
+            "collection": "outwears-and-jackets",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_eH87j4",
+        "collection_qM7W36",
+        "collection_cJTtdE",
+        "collection_pVXX9U"
+      ],
+      "name": "Featured collections",
+      "settings": {
+        "bg_color": "bg-body",
+        "bg_opacity": 100,
+        "bg_gradient": "",
+        "text_color": "text-body",
+        "border_top_width": 0,
+        "border_bottom_width": 0,
+        "border_color": "border-body",
+        "border_opacity": 100,
+        "container_max_width": "",
+        "header_title": "Featured Collections",
+        "header_title_font_size": "h2",
+        "header_description": "<p>Add on optional description for this section</p>",
+        "header_description_font_size": "fs-md",
+        "slider_speed": 300,
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_pagination_type": "bullets",
+        "slider_scrollbar": true,
+        "slider_partial_slides_mobile": false,
+        "slider_autoplay": 0,
+        "collection_card_text_align": "text-center",
+        "collection_card_img_orientation": "ratio-4x3",
+        "collection_card_img_border": "img-thumbnail",
+        "collection_card_show_title": true,
+        "collection_card_title_font_size": "fs-lg",
+        "collection_card_title_position": "collection-card-title-bottom",
+        "collection_card_show_product_count": true,
+        "breakpoint_mobile": 1,
+        "breakpoint_tablet": 2,
+        "breakpoint_desktop": 4,
+        "pt": 10,
+        "pb": 10
+      }
     }
   },
   "order": [
@@ -385,6 +459,7 @@
     "featured_products_nXJKQn",
     "media_with_text_xTY8gi",
     "faq_7TT7z4",
-    "testimonials_eFtnyC"
+    "testimonials_eFtnyC",
+    "featured_collections_YbPBik"
   ]
 }
