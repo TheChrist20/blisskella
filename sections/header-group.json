@@ -18,6 +18,7 @@
           "type": "mobile",
           "settings": {
             "container_max_width": "",
+            "logo": "shopify://shop_images/Blisskella_Logo-removebg-preview_1.png",
             "logo_height": 100,
             "main_menu": "",
             "collections_menu": "",
